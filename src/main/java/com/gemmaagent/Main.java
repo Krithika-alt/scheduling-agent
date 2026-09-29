@@ -66,8 +66,8 @@ public class Main {
 
                 // 1. Enter all your Calendar IDs here in this array:
                 String[] myCalendars = {
-                        "d9fa539cce4ef7ee4a8c412a5c76019f15f3e7d294741d7d83c60fd274069d83@group.calendar.google.com",
-                        "trpruf2e0o4863rhrsu09ojhjopnq4bt@import.calendar.google.com"
+                        "YOUR CALENDAR ID",
+                        "YOUR CALENDAR ID"
                 };
 
                 StringBuilder schedule = new StringBuilder("Upcoming Schedule & Deadlines:\n");
