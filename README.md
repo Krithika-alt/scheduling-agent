@@ -4,9 +4,9 @@ A local-first LLM scheduling assistant: ask it natural language questions about 
 
 ## Features
 
-- **Local LLM inference via Ollama** — running Gemma entirely on-device, so calendar data and requests never leave the machine.
-- **Tool-calling via LangChain4j** — the agent doesn't hallucinate schedule details; a system prompt forces it to call `getSchedule` before answering, so responses are grounded in real calendar data.
-- **Multi-calendar aggregation** — pulls from multiple Google Calendar IDs in one call and merges them into a single chronological view, including a Canvas-synced calendar so class deadlines show up alongside personal events.
+- **Local LLM inference via Ollama** — running Gemma entirely on-device, so no cloud LLM ever sees your calendar data or requests
+- **Tool-calling via LangChain4j** — the agent doesn't hallucinate schedule details; a system prompt instructs it to call getSchedule before answering, so responses are grounded in real calendar data.
+- **Multi-calendar aggregation** — pulls upcoming events from multiple Google Calendar IDs in one tool call and combines them into a single response, including a Canvas-synced calendar so class deadlines show up alongside personal events.
 - **Timezone-aware formatting** — event times are converted from epoch milliseconds to the local system timezone before being handed to the model, and all-day items (like assignment due dates) are handled separately from timed events.
 - **Secure OAuth2 authentication** — read-only calendar scope (`CALENDAR_READONLY`), with tokens cached locally in `tokens/` rather than re-authenticating every run.
 - **Conversational memory** — a sliding window of the last 10 messages is kept, so follow-up questions ("what about tomorrow?") work without repeating context.
